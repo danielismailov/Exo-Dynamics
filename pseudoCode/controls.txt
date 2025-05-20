@@ -1,12 +1,6 @@
-func initialization{
 
-}
+func controlLoop{
 
-func missionSetup{
-
-}
-
-func mainLoop{
 
 }
 

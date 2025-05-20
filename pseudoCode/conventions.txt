@@ -1,0 +1,60 @@
+VARIABLES/DATA TYPES:
+variableType x = whatever
+
+types: 
+int - integers
+flt - floating point
+str - string
+bln - boolean
+ary - array
+
+arrays -> notated by [], array[x] returs the xth value of in array(zero indeed of course)
+       -> array.append() adds ot the end of array, array.pop(x) removes the xth element in array
+       -> and so on, standard notation
+
+
+IF STATEMENTS:
+if(){
+
+}else if(){
+
+}else{
+
+}
+
+LOOPS:
+for(x in List)or(x from num1 to num2){
+
+}
+
+while(condition){
+
+}
+
+FUNCTIONS:
+func functionName(){
+    
+}
+
+CLASSES:
+class superclassName(){
+    func init(self, x){
+        self.x = x
+    }
+
+    Other functions
+    
+}
+
+class className(superclassName){
+    func init(self, x, y){
+        super.init(x)
+        self.init(y)
+    }
+
+    Other functions
+
+}
+
+
+
