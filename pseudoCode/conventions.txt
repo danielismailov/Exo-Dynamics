@@ -56,5 +56,10 @@ class className(superclassName){
 
 }
 
+COMMENTS:
+# for line comments
 
+//
+for commenting a block of text
+//
 
