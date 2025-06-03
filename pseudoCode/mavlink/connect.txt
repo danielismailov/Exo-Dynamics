@@ -1,1 +1,60 @@
-#code that will establish a mavlink connection
+#components
+str flight_controller = "Pixhawk"           
+str telemetry_radio_air = "SiK Radio"       
+str telemetry_radio_ground = "SiK Radio"    
+str companion_computer = "Jetson"           
+str gps_module = "GPS with compass"
+str power_module = "Power brick"
+str battery = "LiPo Battery"
+str ESCs = "Electronic Speed Controllers"
+str motors = "Brushless Motors"
+
+#ports
+str telem1 = "TELEM1"              
+str telem2 = "TELEM2"              
+str uart = "Jetson UART"           
+str usb = "USB"
+str power= "XT60"
+
+
+func connectTelemetryRadio(){
+}
+
+func connectJetson(){
+   
+}
+
+func connectGPS(){
+
+}    
+
+func connectMotorsAndESCs(){
+   
+}
+
+func checkConnections(){
+    
+}
+
+func powerOnSequence(){
+    
+}
+
+func jetsonSetup(){
+   
+}
+
+func hardwareSetup(){
+    connectTelemetryRadio()
+    connectJetson()
+    connectGPS()
+    connectPowerModule()
+    connectMotorsAndESCs()
+    checkConnections()
+    powerOnSequence()
+    groundStationSetup()
+    jetsonSetup()
+    print("Hardware setup complete")
+}
+
+hardwareSetup()
