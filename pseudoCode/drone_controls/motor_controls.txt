@@ -1,1 +1,31 @@
 #code that will tell individual motors how to behave
+
+func startMotors(){
+    for(motor in motors){
+        motor.setSpeed(initialSpeed)
+    }
+}
+
+func stopMotors(){
+    for(motor in motors){
+        motor.setSpeed(0)
+    }
+}
+
+func increaseThrottle(){
+    for(motor in motors){
+        motor.increaseSpeed(throttleIncrement)
+    }
+}
+
+func decreaseThrottle(){
+    for(motor in motors){
+        motor.decreaseSpeed(throttleDecrement)
+    }
+}
+
+func stabilize(){
+    while(droneTelemetry.isUnstable()){
+        adjustMotorSpeeds(droneTelemetry.getStabilizationData())
+    }
+}

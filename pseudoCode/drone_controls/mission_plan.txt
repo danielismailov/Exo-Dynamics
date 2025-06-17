@@ -1,1 +1,18 @@
 #code for recieving, processing, and excecuting a mission plan
+
+func executeMission(ary waypoints){
+    for(point in waypoints){
+        moveTo(point.coordinates)
+        if(point.action == "hover"){
+            hover(point.duration)
+        }else if(point.action == "take_photo"){
+            camera.capturePhoto()
+        }
+    }
+}
+
+func moveTo(ary coordinates){
+    adjustDirection(coordinates[0], coordinates[1])       //this assumes coordinates are written as such: [latitude, longitude, altitude]
+    adjustAltitude(coordinates[2])
+    move_forward(calculateDistance(droneTelemetry.location, coordinates))
+}

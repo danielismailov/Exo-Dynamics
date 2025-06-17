@@ -1,1 +1,31 @@
 #code that will contain specific flight commands such as: land, takeoff, forward, turn, etc.
+
+func takeoff(flt altitude){
+    if(droneTelemetry.altitude < altitude){
+        motorControls.startMotors()
+        while(droneTelemetry.altitude < altitude){
+            motorControls.increaseThrottle()
+        }
+        motorControls.stabilize()
+    }
+}
+
+func land(){
+    while(droneTelemetry.altitude > 0){
+        motorControls.decreaseThrottle()
+    }
+    motorControls.stopMotors()
+}
+
+func move_forward(flt distance){
+    motorControls.tiltForward()
+    wait until distance traveled equals distance
+    motorControls.stabilize()
+}
+
+func turn(flt angle){
+    motorControls.adjustYaw(angle)
+    wait until yaw adjustment complete
+    motorControls.stabilize()
+}
+

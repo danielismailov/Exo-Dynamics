@@ -1,2 +1,17 @@
 #code for recieving and processing telemetry data
 
+func handleTelemetry(str dataPacket){
+    ary data = parseData(dataPacket)
+    droneTelemetry.altitude = data[0]
+    droneTelemetry.batteryLevel = data[1]
+    droneTelemetry.gpsCoordinates = [data[2], data[3]]
+    droneTelemetry.motorStatus = data[4]
+}
+
+func parseData(str packet){
+    ary data = []
+    
+    // this will include the logic for parsing the data packet recieved
+
+    return data
+}
